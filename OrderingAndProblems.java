@@ -376,7 +376,7 @@ public class OrderingAndProblems {
         }
 
 
-
+        result.add(maxClique);
         return result;
     }
 
