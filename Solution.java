@@ -45,18 +45,18 @@ public class Solution {
         long MCSEnd = System.currentTimeMillis();
         //As the obtained order should be reversed in MCS algorithm at the end, pass the ordering to function reverseOrdering
         MCSOrdering = od.reverseOrdering(MCSOrdering);
-        System.out.println("The Lexicographical Ordering is "+LexBFSOrdering + ". The time taken to build the ordering is " + (LexEnd - LexStart)+" ms");
+        System.out.println("The Lexicographical Ordering is "+LexBFSOrdering );
         //Build a map to store the vertices index in ordering for easy retrieval
         HashMap<Integer, Integer> ordering_checkLexBFS = od.buildOrder(LexBFSOrdering);
         HashMap<Integer, Integer> ordering_checkMCS = od.buildOrder(MCSOrdering);
         //System.out.println(LexBFSOrdering);
-        System.out.println("The MCS Ordering is "+MCSOrdering + ". The time taken to build the ordering is " + (MCSEnd - MCSStart)+" ms");
+        System.out.println("The MCS Ordering is "+MCSOrdering );
 
         long perfectStart = System.currentTimeMillis();
         //To check if the obtained ordering is perfect or not the graph and ordering are passed to function perfect
         boolean flag = od.perfect(new HashMap<>(), graph, LexBFSOrdering, ordering_checkLexBFS);
         long perfectEnd = System.currentTimeMillis();
-        System.out.println("The time taken to check if the ordering is perfect or not is " + (perfectEnd - perfectStart) + " ms" );
+
         //boolean check=od.perfect(new HashMap<>(),graph,MCSOrdering,ordering_checkMCS);
 
 
@@ -71,7 +71,7 @@ public class Solution {
             long cliqueEnd = System.currentTimeMillis();
             int S=clique.size();
             System.out.println((S>=k)?"True, for maximum clique decision problem":"False, for maximum clique decision problem");
-            System.out.println("Largest clique of the graph is " + clique + ". The time taken to calculate the largest clique is " + (cliqueEnd - cliqueStart)+" ms");
+            System.out.println("Largest clique of the graph is " + clique  );
 
 
 
@@ -101,7 +101,7 @@ public class Solution {
             System.out.println("Enter the k for weighted clique decision problem");
             k=sc.nextInt();
             System.out.println((S>=k)?"True, for weighted clique decision problem ":"False, for weighted clique decision problem ");
-            System.out.println("Largest weighted clique of the graph is " + weightedclique + ".The time taken to calculate the largest weighted clique is " + (weightedEnd - weightedStart));
+            System.out.println("Largest weighted clique of the graph is " + weightedclique );
 
 
 
@@ -116,7 +116,7 @@ public class Solution {
             System.out.println("Enter the k for independent set decision problem");
             k=sc.nextInt();
             System.out.println((S>=k)?"True, for independent set independent set decision problem ":"False, for independent set independent set decision problem");
-            System.out.println("Maximum Independet Set is " + stableset.get(stableset.size() - 1) + ". The time taken to calculate the maximum independent set is " + (stableEnd - stableStart));
+            System.out.println("Maximum Independent Set is " + stableset.get(stableset.size() - 1) );
 
            // k for clique cover problem
             System.out.println("Enter the k for clique cover decision problem");

@@ -375,7 +375,7 @@ public class OrderingAndProblems {
 
         }
 
-
+        //weight of the max clique is added at the end and accessed separately
         result.add(maxClique);
         return result;
     }
@@ -423,6 +423,8 @@ public class OrderingAndProblems {
 
         }
 
+
+        //independent set is added at the end of all cliques and both the cliques and independent set are accessed separately
         result.add(stable);
 
         return result;
